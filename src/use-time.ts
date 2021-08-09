@@ -10,7 +10,7 @@ export const regExp = new RegExp(/^\d{1,2}:?(\d{1,2})?\s?([ap]m?)?$/, 'i');
 
 export function useTime(
   initialValue: string,
-  format: '12' | '24' = '12'
+  format: '12' | '24' = '12',
 ): string {
   const [value, setValue] = useState(initialValue);
 
