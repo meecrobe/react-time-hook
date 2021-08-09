@@ -4,6 +4,8 @@
 
 ![Demo](https://user-images.githubusercontent.com/8003440/128711176-2d323c95-f5f4-47de-9e9c-d572e01f9e10.gif)
 
+[Live demo](https://meecrobe.github.io/react-time-hook/)
+
 ## Installation
 
 ```bash
