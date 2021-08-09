@@ -27,7 +27,23 @@
       "pre-commit": "tsdx lint"
     }
   },
-  "name": "react-time-hook",
+  "keywords": [
+    "react",
+    "hooks",
+    "time",
+    "typescript",
+    "react-hooks",
+    "custom-hooks"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meecrobe/react-time-hook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/meecrobe/react-time-hook/issues"
+  },
+  "homepage": "https://meecrobe.github.io/react-time-hook/",
+  "name": "@meecrobe/react-time-hook",
   "author": "Vadzim Tsupryk",
   "module": "dist/react-time-hook.esm.js",
   "size-limit": [

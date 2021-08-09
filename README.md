@@ -1,4 +1,4 @@
-# react-time-hook
+# @meecrobe/react-time-hook
 
 ![Build](https://img.shields.io/github/workflow/status/meecrobe/react-time-hook/CI)
 
