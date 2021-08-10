@@ -1,8 +1,8 @@
 # @meecrobe/react-time-hook
 
-![Build](https://img.shields.io/github/workflow/status/meecrobe/react-time-hook/CI)
-
 🕑 React hook for formatting string to 12- or 24-hour time.
+
+![Build](https://img.shields.io/github/workflow/status/meecrobe/react-time-hook/CI)
 
 ![Demo](https://user-images.githubusercontent.com/8003440/128711176-2d323c95-f5f4-47de-9e9c-d572e01f9e10.gif)
 
@@ -42,6 +42,13 @@ function TimeInput() {
   );
 }
 ```
+
+## Props
+
+| Prop         | Type           | Description   |
+| ------------ | -------------- | ------------- |
+| initialValue | `string`       | Initial value |
+| format       | `'12' \| '24'` | Time format   |
 
 ## Examples of string values and their formatting results
 
