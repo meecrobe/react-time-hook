@@ -8,33 +8,36 @@ import {
 
 export const regExp = new RegExp(/^\d{1,2}:?(\d{1,2})?\s?([ap]m?)?$/, 'i');
 
+type TimeFormat = '12' | '24';
+
 export function useTime(
   initialValue: string,
-  format: '12' | '24' = '12',
+  format: TimeFormat = '12',
 ): string {
   const [value, setValue] = useState(initialValue);
 
   useEffect(() => {
-    const lowercaseValue = initialValue.toLowerCase();
-    let time = format === '12' ? '12:00 AM' : '12:00';
+    const time = convert(initialValue, format);
 
-    if (!regExp.test(lowercaseValue)) {
+    if (time) {
       setValue(time);
-
-      return;
     }
-
-    const [hours, minutes] = getHoursAndMinutes(initialValue);
-    const timePeriod = getTimePeriod(initialValue);
-
-    if (format === '12') {
-      time = convertTo12Hour(hours, minutes, timePeriod);
-    } else {
-      time = convertTo24Hour(hours, minutes, timePeriod);
-    }
-
-    setValue(time);
   }, [initialValue, format]);
 
   return value;
+}
+
+export function convert(value: string, format: TimeFormat) {
+  const lowercaseValue = value.toLowerCase();
+
+  if (!regExp.test(lowercaseValue)) {
+    return null;
+  }
+
+  const [hours, minutes] = getHoursAndMinutes(value);
+  const timePeriod = getTimePeriod(value);
+
+  return format === '12'
+    ? convertTo12Hour(hours, minutes, timePeriod)
+    : convertTo24Hour(hours, minutes, timePeriod);
 }

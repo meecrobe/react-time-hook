@@ -1,1 +1,1 @@
-export { useTime } from './use-time';
+export { convert, useTime } from './use-time';
