@@ -1,5 +1,5 @@
 export function getHoursAndMinutes(value: string): [number, number] {
-  let digits = value.split(':').map((digit) => digit.replace(/\D/g, ''));
+  let digits = value.split(':').map((digit) => digit.replace(/\D/g, '') || '0');
 
   if (digits.length === 2) {
     return [Number.parseInt(digits[0], 10), Number.parseInt(digits[1], 10)];

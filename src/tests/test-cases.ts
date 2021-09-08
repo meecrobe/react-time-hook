@@ -84,6 +84,14 @@ export const testCasesFor12hour: TestCase[] = [
     value: '1201am',
     result: '12:01 AM',
   },
+  {
+    value: '3:',
+    result: '3:00 AM',
+  },
+  {
+    value: '43:',
+    result: '12:00 AM',
+  },
 ];
 
 export const testCasesFor24hour: TestCase[] = [
@@ -171,4 +179,12 @@ export const testCasesFor24hour: TestCase[] = [
     value: '66:66',
     result: '00:00',
   },
+  {
+    value: '22:',
+    result: '22:00',
+  },
+  {
+    value: '99:',
+    result: '00:00',
+  }
 ];
