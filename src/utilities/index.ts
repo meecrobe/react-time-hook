@@ -36,7 +36,7 @@ export function getTimePeriod(value: string): TimePeriod {
 export function convertTo12Hour(
   hours: number,
   minutes: number,
-  timePeriod: TimePeriod
+  timePeriod: TimePeriod,
 ) {
   let _hours = hours;
   let _minutes = minutes;
@@ -61,13 +61,13 @@ export function convertTo12Hour(
   _hours = _hours % 12;
   _hours = _hours ? _hours : 12;
 
-  return `${addLeadingZero(_hours)}:${addLeadingZero(_minutes)} ${_timePeriod}`;
+  return `${_hours}:${addLeadingZero(_minutes)} ${_timePeriod}`;
 }
 
 export function convertTo24Hour(
   hours: number,
   minutes: number,
-  timePeriod: TimePeriod
+  timePeriod: TimePeriod,
 ) {
   let _hours = hours;
   let _minutes = minutes;

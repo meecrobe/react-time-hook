@@ -14,7 +14,7 @@ export const testCasesFor12hour: TestCase[] = [
   },
   {
     value: '1',
-    result: '01:00 AM',
+    result: '1:00 AM',
   },
   {
     value: '10',
@@ -26,7 +26,7 @@ export const testCasesFor12hour: TestCase[] = [
   },
   {
     value: '13',
-    result: '01:00 PM',
+    result: '1:00 PM',
   },
   {
     value: '24',
@@ -38,11 +38,11 @@ export const testCasesFor12hour: TestCase[] = [
   },
   {
     value: '345',
-    result: '03:45 AM',
+    result: '3:45 AM',
   },
   {
     value: '1334',
-    result: '01:34 PM',
+    result: '1:34 PM',
   },
   {
     value: '5889',
@@ -50,7 +50,7 @@ export const testCasesFor12hour: TestCase[] = [
   },
   {
     value: '1:4',
-    result: '01:04 AM',
+    result: '1:04 AM',
   },
   {
     value: '11:4',
@@ -66,19 +66,19 @@ export const testCasesFor12hour: TestCase[] = [
   },
   {
     value: '2000',
-    result: '08:00 PM',
+    result: '8:00 PM',
   },
   {
     value: '3p',
-    result: '03:00 PM',
+    result: '3:00 PM',
   },
   {
     value: '8:21p',
-    result: '08:21 PM',
+    result: '8:21 PM',
   },
   {
     value: '821p',
-    result: '08:21 PM',
+    result: '8:21 PM',
   },
   {
     value: '1201am',
