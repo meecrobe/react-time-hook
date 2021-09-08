@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useTime } from '../../.';
+import { useTime, convert } from '../../.';
 
 interface TimeInputProps {
   value: string;
@@ -21,7 +21,7 @@ export function TimeInput({
     (e) => {
       setValue(time);
     },
-    [time]
+    [time],
   );
 
   return (
