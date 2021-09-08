@@ -6,7 +6,7 @@ export interface TestCase {
 export const testCasesFor12hour: TestCase[] = [
   {
     value: '',
-    result: '12:00 AM',
+    result: '',
   },
   {
     value: '0',
