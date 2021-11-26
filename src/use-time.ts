@@ -27,7 +27,11 @@ export function useTime(
   return value;
 }
 
-export function convert(value: string, format: TimeFormat) {
+export function convert(
+  value: string,
+  format: TimeFormat,
+  padHoursWithZero: boolean = false,
+) {
   const lowercaseValue = value.toLowerCase();
 
   if (!regExp.test(lowercaseValue)) {
@@ -38,6 +42,6 @@ export function convert(value: string, format: TimeFormat) {
   const timePeriod = getTimePeriod(value);
 
   return format === '12'
-    ? convertTo12Hour(hours, minutes, timePeriod)
+    ? convertTo12Hour(hours, minutes, timePeriod, padHoursWithZero)
     : convertTo24Hour(hours, minutes, timePeriod);
 }

@@ -73,6 +73,14 @@ describe('convertTo12Hour()', () => {
   it('should return "7:05 PM"', () => {
     expect(convertTo12Hour(7, 5, 'PM')).toBe('7:05 PM');
   });
+
+  it('should return "07:05 PM"', () => {
+    expect(convertTo12Hour(7, 5, 'PM', true)).toBe('07:05 PM');
+  });
+
+  it('should return "03:13 PM"', () => {
+    expect(convertTo12Hour(3, 13, 'PM', true)).toBe('03:13 PM');
+  });
 });
 
 describe('convertTo24Hour()', () => {

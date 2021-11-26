@@ -37,6 +37,7 @@ export function convertTo12Hour(
   hours: number,
   minutes: number,
   timePeriod: TimePeriod,
+  padHoursWithZero: boolean = false,
 ) {
   let _hours = hours;
   let _minutes = minutes;
@@ -61,7 +62,9 @@ export function convertTo12Hour(
   _hours = _hours % 12;
   _hours = _hours ? _hours : 12;
 
-  return `${_hours}:${addLeadingZero(_minutes)} ${_timePeriod}`;
+  return `${
+    padHoursWithZero ? addLeadingZero(_hours) : _hours
+  }:${addLeadingZero(_minutes)} ${_timePeriod}`;
 }
 
 export function convertTo24Hour(
