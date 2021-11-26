@@ -45,15 +45,16 @@ function TimeInput() {
 
 ## Props
 
-| Prop         | Type           | Description   |
-| ------------ | -------------- | ------------- |
-| initialValue | `string`       | Initial value |
-| format       | `'12' \| '24'` | Time format   |
+| Prop         | Type           | Description                                 |
+| ------------ | -------------- | ------------------------------------------- |
+| initialValue | `string`       | Initial value                               |
+| format       | `'12' \| '24'` | Time format                                 |
+| padZero      | `boolean`      | Add leading zero to hours in 12-hour format |
 
 ## Examples of string values and their formatting results
 
 <details>
-<summary>To 12-hour time format</summary>
+<summary>To 12-hour time format (without leading zeros)</summary>
 
 | Input      | Output        |
 | ---------- | ------------- |

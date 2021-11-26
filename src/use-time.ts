@@ -13,16 +13,17 @@ type TimeFormat = '12' | '24';
 export function useTime(
   initialValue: string,
   format: TimeFormat = '12',
+  padZero: boolean = false,
 ): string {
   const [value, setValue] = useState(initialValue);
 
   useEffect(() => {
-    const time = convert(initialValue, format);
+    const time = convert(initialValue, format, padZero);
 
     if (time) {
       setValue(time);
     }
-  }, [initialValue, format]);
+  }, [initialValue, format, padZero]);
 
   return value;
 }
